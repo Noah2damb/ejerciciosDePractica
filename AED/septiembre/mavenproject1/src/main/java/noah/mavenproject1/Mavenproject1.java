@@ -13,12 +13,13 @@ public class Mavenproject1 {
     public static void main(String[] args) {
         
         AnalizadorFichero programa = new AnalizadorFichero("./src/main/java/noah/mavenproject1/archivo.html");
-        Directorio dir1 = new Directorio("./src/main/java/noah/mavenproject1");
+        //Directorio dir1 = new Directorio("./src/main/java/noah/mavenproject1");
         Directorio dir2 = new Directorio("./src/main/java/noah");
         
         programa.mostrarInfo();
-        dir1.mostrarInfo();
-        dir2.mostrarInfo();
+        //dir1.mostrarInfo();
+        System.out.println("\nContenido del directorio %s:".formatted(dir2.nombre));
+        dir2.mostrarAnalisisRecursivo("./src", 0);
         
         /*try {
         Process p = Runtime.getRuntime().exec("firefox ./src/main/java/noah/mavenproject1/archivo.html");

@@ -13,7 +13,7 @@ import java.io.File;
 public class Directorio {
     
     private File[] archivos = null;
-    private String nombre = null;
+    public String nombre = null;
     private String datos = "";
     
     public Directorio(String ruta){
@@ -21,16 +21,15 @@ public class Directorio {
         File dir = new File(ruta);
        
         if (dir.exists()){
-            
             nombre = dir.getName();
-            analizar(dir);
+            analizarBasico(dir);
         }
         else {
             System.out.println("El directorio %s no existe".formatted(ruta));
         }
     }
     
-    private void analizar(File dir){
+    private void analizarBasico(File dir){
         
         if (dir.isDirectory()){
             
@@ -43,6 +42,35 @@ public class Directorio {
                 }
                 else {
                     datos += "\n|---->Fichero: " + elemento.getName();
+                }
+            }
+        }
+        else {
+            System.out.println("%s no es un directorio.".formatted(nombre));
+        }
+    }
+    
+    public void mostrarAnalisisRecursivo(String ruta, int numTabs){
+        
+        File dir = new File(ruta);
+        
+        if (dir.isDirectory()){
+            
+            archivos = dir.listFiles();
+            
+            if (archivos == null){
+                System.out.println("  ".repeat(numTabs) + "Este directorio está vacío");
+                return ;
+            }
+            
+            for (File elemento : archivos){
+                
+                if (elemento.isDirectory()){
+                    System.out.println("  ".repeat(numTabs) + "|---->Directorio: " + elemento.getName());
+                    mostrarAnalisisRecursivo(elemento.getPath(), ++numTabs);
+                }
+                else {
+                    System.out.println("   ".repeat(numTabs) + "|---->Fichero: " + elemento.getName());
                 }
             }
         }
