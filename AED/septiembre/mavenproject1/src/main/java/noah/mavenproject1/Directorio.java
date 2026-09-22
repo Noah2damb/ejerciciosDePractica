@@ -67,10 +67,10 @@ public class Directorio {
                 
                 if (elemento.isDirectory()){
                     System.out.println("  ".repeat(numTabs) + "|---->Directorio: " + elemento.getName());
-                    mostrarAnalisisRecursivo(elemento.getPath(), ++numTabs);
+                    mostrarAnalisisRecursivo(elemento.getPath(), numTabs + 1);
                 }
                 else {
-                    System.out.println("   ".repeat(numTabs) + "|---->Fichero: " + elemento.getName());
+                    System.out.println("  ".repeat(numTabs) + "o---->Fichero: " + elemento.getName());
                 }
             }
         }
