@@ -19,7 +19,7 @@ public class Mavenproject1 {
         programa.mostrarInfo();
         //dir1.mostrarInfo();
         System.out.println("\nContenido del directorio %s:".formatted(dir2.nombre));
-        dir2.mostrarAnalisisRecursivo("./src", 0);
+        dir2.mostrarAnalisisRecursivo("./../..", 0);
         
         /*try {
         Process p = Runtime.getRuntime().exec("firefox ./src/main/java/noah/mavenproject1/archivo.html");
