@@ -11,6 +11,7 @@ package noah.ejerciciosFicheros;
 public class EjerciciosFicheros {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Fichero fich1 = new Fichero("./src/main/java/noah/ejerciciosFicheros/Fichero.java");
+        
     }
 }
