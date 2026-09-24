@@ -1,1 +1,69 @@
-/AED/septiembre/mavenproject1/target/
+# ==========================================
+# Archivos del sistema operativo
+# ==========================================
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.tmp
+*.log
+
+# ==========================================
+# Compilación genérica de Java / Maven / Gradle
+# ==========================================
+*.class
+build/
+bin/
+dist/
+target/
+out/
+
+# ==========================================
+# NetBeans
+# ==========================================
+# La carpeta private contiene rutas absolutas locales y configuraciones de usuario
+nbproject/private/
+nbproject/project.fragment
+nbproject/nb-configuration.xml
+.nb-gradle/
+nbbuild/
+nbdist/
+
+# ==========================================
+# Android Studio / IntelliJ IDEA
+# ==========================================
+# Ajustes de área de trabajo local del IDE
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+.idea/caches/
+.idea/libraries/
+
+# Si prefieres ignorar toda la carpeta .idea (muy habitual en Android Studio):
+.idea/
+
+# Archivos de proyecto individual de IntelliJ
+*.iml
+*.ipr
+*.iws
+
+# Archivos específicos de Android y SDK local (Contiene tu ruta personal del SDK)
+local.properties
+.gradle/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Artefactos de compilación Android
+*.apk
+*.aab
+*.dex
+
+# ==========================================
+# SceneBuilder / JavaFX
+# ==========================================
+# NOTA: Los archivos .fxml SÍ deben guardarse en Git (son tu código de interfaz).
+# Solo se ignoran ajustes locales de previsualización si existieran.
+.scenebuilder/
