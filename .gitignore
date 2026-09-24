@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # ==========================================
 # Archivos del sistema operativo
 # ==========================================
@@ -67,3 +68,7 @@ captures/
 # NOTA: Los archivos .fxml SÍ deben guardarse en Git (son tu código de interfaz).
 # Solo se ignoran ajustes locales de previsualización si existieran.
 .scenebuilder/
+=======
+/AED/septiembre/mavenproject1/target/
+/AED/septiembre/ejerciciosFicheros/target/
+>>>>>>> Stashed changes
