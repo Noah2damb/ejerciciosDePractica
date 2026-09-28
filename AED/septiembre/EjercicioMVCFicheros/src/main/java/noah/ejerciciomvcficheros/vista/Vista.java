@@ -8,6 +8,6 @@ package noah.ejerciciomvcficheros.vista;
  *
  * @author 2damb
  */
-public interface Vista {
+public interface Vista extends AutoCloseable {
     
 }
