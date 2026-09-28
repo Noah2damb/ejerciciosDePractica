@@ -1,32 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package avancesdad_noah;
 
-import javafx.application.*;
-import javafx.stage.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
 
-/**
- *
- * @author 2damb
- */
 public class HelloFX extends Application {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        
+        launch(args);
     }
-    
+
     @Override
-    public void start(Stage stage){
+    public void start(Stage stage) {
+        // 1. Crear componentes
         BorderPane panel = new BorderPane();
         Button boton = new Button("Click me!");
-        
+
+        // 2. Agregar el botón al centro del panel
+        panel.setCenter(boton);
+
+        // 3. Crear la escena asociando el panel y definiendo dimensiones (ancho, alto)
+        Scene scene = new Scene(panel, 400, 300);
+
+        // 4. Configurar y mostrar la ventana (Stage)
+        stage.setTitle("Hola JavaFX");
+        stage.setScene(scene);
+        stage.show();
     }
 }
