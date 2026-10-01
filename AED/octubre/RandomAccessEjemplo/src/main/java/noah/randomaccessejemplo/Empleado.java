@@ -10,26 +10,26 @@ package noah.randomaccessejemplo;
  */
 public class Empleado {
     
+    public int id;
     public String nombre;
     public String apellido;
     public double salario;
-    public int departamento;
     public String puesto;
     
     public int NOM_LEN = 10;
     public int APE_LEN = 20;
-    public int SAL_MAX = 9;
-    public int DEP_MAX = 2;
+    public double SAL_MAX = 999999.99;
     public int PUE_MAX = 10;
     
     
-    public Empleado(String nombre, String apellido, double salario, int departamento, String puesto){
+    public Empleado(int id, String nombre, String apellido, double salario, String puesto){
         
-        if (validarEntrada(nombre, apellido, salario, departamento, puesto)){
+        if (validarEntrada(id, nombre, apellido, salario, puesto)){
+            
+            this.id = id;
             this.nombre = nombre;
             this.apellido = apellido;
             this.salario = salario;
-            this.departamento = departamento;
             this.puesto = puesto;
         }
         else {
@@ -37,17 +37,34 @@ public class Empleado {
         }
     }
     
-    private boolean validarEntrada(String nombre, String apellido, double salario, int departamento, String puesto){
+    private boolean validarEntrada(int id, String nombre, String apellido, double salario, String puesto){
+        
         boolean esCorrecto = true;
         
-        if (nombre.trim().length() > NOM_LEN || apellido.trim().length() > APE_LEN || String.valueOf(salario).length() > SAL_MAX 
-                || String.valueOf(departamento).length() > DEP_MAX || puesto.trim().length() > PUE_MAX){
-            esCorrecto = false;
-        }
-        else if (salario < 0 || salario > 999999.99 || departamento < 1 || departamento > 99) {
+        if (id < 1 || nombre.trim().length() > NOM_LEN || nombre.trim().length() < 1
+                || apellido.trim().length() > APE_LEN || apellido.trim().length() < 1
+                || salario > SAL_MAX || salario < 1
+                || puesto.trim().length() > PUE_MAX || puesto.trim().length() < 1){
+            
             esCorrecto = false;
         }
         
         return esCorrecto;
     }
+    
+    public String leerEmpleado(int id){
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        
+        String empleado;
+        
+        empleado = "%-".formatted(this.id, this.nombre, this.apellido, this.salario, this.puesto);
+        
+        return empleado;
+    }
+    
+    
 }
