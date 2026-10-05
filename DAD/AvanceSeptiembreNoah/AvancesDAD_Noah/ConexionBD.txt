@@ -1,0 +1,3 @@
+rutaMaquina=jdbc:mysql://localhost:3306
+usuario=root
+clave=noah2damb
